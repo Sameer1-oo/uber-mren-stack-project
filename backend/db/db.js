@@ -14,3 +14,7 @@ function connectToDb() {
     });
 }
 module.exports = connectToDb;
+
+
+
+//  npx mongoose  not runing issue in moduel dawaloand load 
