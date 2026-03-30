@@ -9,7 +9,8 @@ router.post('/register',[
     ('Frist name must be at least 3 characters long'),   
     body('Password').islength({min: 6}).withMessage('Password must be at least 6 charchter')
 ],
-userController.registerUser )
+userController.registerUser 
+)
 router.post('/login', [
     body('email').isEmail().withMessage('Invalid Email'),
     body('Password').islength({min: 6}).withMessage('Password must be at least 6 charchter')
@@ -17,7 +18,7 @@ router.post('/login', [
 userController.loginUser
 )
 
-
+router.get('/profile', userController.getUserProfile)
 
 
 module.exports = router;

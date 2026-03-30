@@ -32,6 +32,11 @@ module.exports.registerUser = async (req, res, next) => {
     const isMatch = await user.comparePassword(Password);
     if(!isMatch){
         return res.status(401).json({ message: 'Invalid email or Password'});
-        
     }
+    const token = user.genrateAuthToken();
+    res.status(200).json({token, user});
+ }
+
+ module.exports.getUserProfile = async (req,res,next) => {
+    res.status(200).json(req.user);
  }

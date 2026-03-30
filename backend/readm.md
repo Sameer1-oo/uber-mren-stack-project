@@ -83,3 +83,16 @@ curl -X POST http://localhost:4000/users/register \
     "Password": "secret123"
   }'
 ```
+
+
+## user login 
+```bash
+'{
+    "fullname": {
+      "fristname": "John",
+      "LastName": "Doe"
+    },
+    "email": "john.doe@example.com",
+    "Password": "secret123"
+  }'
+```
